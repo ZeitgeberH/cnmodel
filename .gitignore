@@ -10,6 +10,7 @@ cnmodel_venv  # virutal environment
 cnmodel/mechanisms/*.c
 cnmodel/mechanisms/*.o
 cnmodel/an_model/model/*.mexmaci64
+cnmodel/cells/tests/cell_data/*
 cochleae
 examples/*.pdf
 examples/*.p
@@ -22,6 +23,9 @@ cnmodel.egg*
 .cache*
 .pytest*
 Figure6*
+
+.vscode/*
+nrnmech.dll
 
 
 

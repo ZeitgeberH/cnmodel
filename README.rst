@@ -33,14 +33,15 @@ Issues
 =========
 Install `cochlea`_ from its github repo. The pip version is obsolete and will throw error related the numpy's fft function.
 
+.. _`cochlea`: https://github.com/mrkrd/cochlea
+
 Testing
 ==========
 It is better to regenerate the test results rather than use the ones in the repo with which Pickle has some parse issues::
 
   $ python test.py --audit
 
-.. _`cochlea`: https://github.com/mrkrd/cochlea
+
 
 Changes in this branch
 ========================
-* testing for matlab is dropped.

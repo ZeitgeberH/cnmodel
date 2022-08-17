@@ -26,6 +26,7 @@ Figure6*
 
 .vscode/*
 nrnmech.dll
+ .gitignore~
 
 
 

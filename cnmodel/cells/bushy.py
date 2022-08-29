@@ -8,6 +8,7 @@ from ..util import Params
 import numpy as np
 from .. import data
 import pprint
+import pdb
 pp = pprint.PrettyPrinter(indent=4, width=60)
     
 __all__ = ['Bushy', 'BushyRothman']
@@ -238,6 +239,8 @@ class BushyRothman(Bushy):
         self.do_morphology(morphology)
 
         self.pars = self.get_cellpars(dataset, species=species, modelType=modelType)
+
+
         self.status['na'] = self.pars.natype
         # decorate the morphology with ion channels
         if decorator is None:   # basic "point" model, only on the soma, uses table data for soma.
@@ -357,7 +360,9 @@ class BushyRothman(Bushy):
                 self.adjust_na_chans(soma, sf=1.0, vshift=self.pars.nabu_vshift)
             else:
                 self.adjust_na_chans(soma, sf=1.0)
+            
             soma().kht.gbar = nstomho(self.pars.kht_gbar, self.somaarea)
+            print('kht:',soma().kht.gbar, self.pars.kht_gbar, self.somaarea)
             soma().klt.gbar = nstomho(self.pars.klt_gbar, self.somaarea)
             soma().ihvcn.gbar = nstomho(self.pars.ihvcn_gbar, self.somaarea)
             soma().leak.gbar = nstomho(self.pars.leak_gbar, self.somaarea)

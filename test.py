@@ -1,4 +1,5 @@
 from __future__ import print_function
+import pdb
 """
 Run unit tests for cnmodel
 """
@@ -39,7 +40,9 @@ def main():
 
     # Start tests.
     print("Testing with flags: %s" % " ".join(flags))
+    pdb.set_trace()
     pytest.main(flags)
+
 
 
 if __name__ == '__main__':
